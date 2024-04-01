@@ -1,15 +1,3 @@
-class Stocks:
-    def __init__(self, stname):
-        self.stname = stname
-    def url(self):
-        url_stocks = []
-        # url_base = 'https://www.marketwatch.com/investing/stock/'
-        for i in self.stname:
-            # url_stocks.append(url_base + i)
-            url_stocks.append(f"https://www.tradingview.com/symbols/BVC-{i}/")
-        stocks_and_urls = [self.stname, url_stocks]
-        return stocks_and_urls
-
 class WaterQualitySources:
     def __init__(self, station_code_base="BARQ", start=4, end=8):
         self.station_code_base = station_code_base

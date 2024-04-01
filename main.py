@@ -1,5 +1,5 @@
 # Reemplazando las importaciones por las clases adaptadas
-from classes.water_quality_sources import WaterQualityStations
+from classes.water_quality_sources import WaterQualitySources
 from classes.sources_data_fetcher import SourceDataFetcher
 from classes.water_quality_scrap  import WaterQualityScrap
 from classes.to_dataframe import ToDataFrame
@@ -8,7 +8,7 @@ from classes.to_json import Tojson
 from classes.saves_to_s3 import SaveS3
 
 # ------------------ WaterQualityStations class (adaptado de Stocks)
-stations = WaterQualityStations()
+stations = WaterQualitySources()
 urls = stations.urls()
 
 # ------------------ WaterQualityScrap class testing (adaptado de Scrap)
@@ -31,6 +31,6 @@ json_result = to_json.convert()
 print(json_result)
 
 # -------------- Save to S3
-up = SaveS3(jsn)
+up = SaveS3(json_result)
 s3_obj = up.write_to_minio_parquet()
 print(s3_obj)

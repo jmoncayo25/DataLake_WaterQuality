@@ -1,7 +1,7 @@
 # Reemplazando las importaciones por las clases adaptadas
 from classes.water_quality_sources import WaterQualitySources
 from classes.sources_data_fetcher import SourceDataFetcher
-from classes.water_quality_scrap  import WaterQualityScrap
+from classes.water_quality_scrap import WaterQualityScrap
 from classes.to_dataframe import ToDataFrame
 from classes.transform import Transform
 from classes.to_json import Tojson
